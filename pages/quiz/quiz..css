@@ -109,8 +109,8 @@ main {
 .pergunta p {
     font-style: italic;
     font-size: 14px;
-    color: var(--secondary-text-color);
     margin-bottom: 12px;
+    color: var(--secondary-text-color);  
 }
 
 .pergunta h2 {
@@ -146,7 +146,7 @@ main {
 .alternativas label {
     display: block;
     background: var(--button-bg);
-    display: 12px;
+    padding: 12px;
     font-size: 18px;
     font-weight: 500;
     border-radius: 12px;
@@ -161,16 +161,17 @@ main {
         background: var(--purple);
         color: var(--white);
     }
-.alternativas label#correta {
-        outline: 3px solid var(--green);
-
-        & span {
-            background: var(--green);
-            color: var(--white);
-        }
-    }
-
 }
+
+.alternativas label#correta {
+    outline: 3px solid var(--green);
+
+    & span {
+        background: var(--green);
+        color: var(--white);
+    }
+}
+
 
 .alternativas label#errada {
     outline: 3px solid var(--red);
@@ -217,8 +218,25 @@ main {
 
     font-size: 18px;
     font-weight: 500;
+}
 
 @media(min-width: 1100px) {
+    header {
+        margin-block: 81px;
+        max-width: 1160px;
+        margin-inline: auto;
+      }
+
+    .assunto_icone {
+        width: 56px;
+        height: 56px;
+        padding: 8px;
+    }
+
+    .assunto h1 {
+        font-size: 28px;
+    }
+
     .tema {
         gap: 16px;
     }
@@ -236,5 +254,60 @@ main {
         width: 20px;
         height: 20px;
     }
+
+    main {
+        max-width: 1160px;
+        margin-inline: auto;
+
+        display: flex;
+        gap: 130px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .pergunta{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .pergunta p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 27px;
+    }
+
+    .pergunta h2{
+        font-size: 36px;
+        line-height: 42px;
+    }
+    
+    .alternativas form {
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .alternativas label {
+        font-size: 22px;
+        padding: 18px 20px;
+    }
+
+    .alternativas div {
+        gap: 32px;
+    }
+
+    .alternativas div span {
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+    }
+
+    .alternativas button {
+        font-size: 22px;
+    }
 }
-}
+   
+
+
